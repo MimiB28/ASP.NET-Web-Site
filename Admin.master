@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<%@ Register src="UserControls/UserInfo.ascx" tagname="UserInfo" TagPrefix ="uc1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>FlowerParadise Admin</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="Window">
+            <div class="Main">
+                <div class="Left">
+                    <%--<uc1:userinfo id="UserInfo1" runat="server" />--%>
+                    <a href="HomePage.aspx#myPage">HOME</a>
+                </div>
+                <div class="Right">
+                    <div class="AdminHeader">
+                        <asp:ContentPlaceHolder ID="titlePlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="AdminContents">
+                    <asp:ContentPlaceHolder ID="adminPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
